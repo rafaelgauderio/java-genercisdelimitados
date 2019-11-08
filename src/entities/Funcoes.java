@@ -24,6 +24,21 @@ public class Funcoes {
 		}
 		return maior;
 	}
+	//falar que é o Tipo é um do tipo comparable
+	public static <Tipo extends Comparable<Tipo>> Tipo maiorValorProduto(List<Tipo> lista) {
+		if (lista.isEmpty()) {
+		throw new IllegalStateException("A lista nãopode ser vazia");
+		}
+		
+		Tipo maior = lista.get(0);
+		for (Tipo apelido : lista) {
+			if (apelido.compareTo(maior) > 0) {
+				maior = apelido;
+			}
+
+		}
+		return maior;
+	}
 
 	public void setArgumento(double argumento) {
 		this.argumento = argumento;
