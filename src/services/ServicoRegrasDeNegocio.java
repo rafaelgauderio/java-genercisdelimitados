@@ -42,7 +42,8 @@ public class ServicoRegrasDeNegocio {
 	}
 
 	// falar que é o Tipo é um do tipo comparable
-	public static <Tipo extends Comparable<Tipo>> Tipo maiorValorProduto(List<Tipo> lista) {
+	// pode ser um classe to tipo Tipo ou qualquer superClasse to tipo Tipo
+	public static <Tipo extends Comparable<? super Tipo>> Tipo maiorValorProduto(List<Tipo> lista) {
 		if (lista.isEmpty()) {
 			throw new IllegalStateException("A lista nãopode ser vazia");
 		}
