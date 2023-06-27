@@ -1,0 +1,6 @@
+computador,2500
+tablet,1200
+celular sangung,1800
+celular iphone,2900
+celular velho,700
+Data Show,5400
