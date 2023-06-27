@@ -5,7 +5,8 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
-import entities.Funcoes;
+
+import services.ServicoRegrasDeNegocio;
 
 public class ProgramTestes {
 
@@ -13,11 +14,11 @@ public class ProgramTestes {
 
 		double x = 0.95;
 
-		Funcoes func = new Funcoes(x);
+		ServicoRegrasDeNegocio func = new ServicoRegrasDeNegocio(x);
 
 		System.out.println(func);
-		System.out.println("Seno do argumento: " + func.funcaoSeno(x));
-		System.out.println("Cosseno do argumento: " + func.funcaoCosseno(x));
+		System.out.println("Seno do argumento: " + String.format("%.2f", func.funcaoSeno(x)));
+		System.out.println("Cosseno do argumento: " + String.format("%.2f", func.funcaoCosseno(x)));
 		System.out.println("--------------------------------------------");
 
 		List<Integer> lista = new ArrayList<Integer>();
@@ -38,7 +39,7 @@ public class ProgramTestes {
 
 			}
 			// funcao estática não precisa ser instãnciada
-			Integer maiorDaLista = Funcoes.maiorValor(lista);
+			Integer maiorDaLista = ServicoRegrasDeNegocio.maiorValor(lista);
 
 			System.out.println("O maior valor da lista é " + maiorDaLista);
 

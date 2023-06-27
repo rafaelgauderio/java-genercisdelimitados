@@ -28,13 +28,13 @@ public class Produto implements Comparable<Produto>{
 
 	@Override
 	public String toString() {
-		return "Produto [nome=" + nome + ", preco=R$ " + String.format("%.2f", preco) + "]";
+		return "Produto [nome=" + nome + ", preco= R$ " + String.format("%.2f", preco) + "]";
 	}
 
 	@Override
 	public int compareTo(Produto outro) {
 	//Nese caso ele compara os preços e retorna o maior	
-		return preco.compareTo(outro.getPreco());
+		return this.preco.compareTo(outro.getPreco());
 	}
 
 }

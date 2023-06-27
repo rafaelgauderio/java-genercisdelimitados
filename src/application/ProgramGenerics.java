@@ -7,10 +7,10 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Locale;
 
-import entities.Funcoes;
 import entities.Produto;
+import services.ServicoRegrasDeNegocio;
 
-public class Genericis {
+public class ProgramGenerics {
 
 	public static void main(String[] args) {
 		
@@ -34,7 +34,7 @@ public class Genericis {
 
 			}
 			
-			Produto maiorDaLista = Funcoes.maiorValorProduto(lista);
+			Produto maiorDaLista = ServicoRegrasDeNegocio.maiorValorProduto(lista);
 			System.out.println("\nO maior valor da lista é " + maiorDaLista);
 
 
